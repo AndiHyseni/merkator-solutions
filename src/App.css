@@ -39,13 +39,12 @@
 }
 
 .hero-kicker {
-  max-width: 10.8ch;
   margin: 0;
   font-family: "Orbitron", sans-serif;
   font-weight: 600;
   letter-spacing: 0.2px;
   line-height: 1.04;
-  font-size: clamp(42px, 7.2vw, 72px);
+  font-size: clamp(42px, 7.2vw, 64px);
   color: #ccf4eb;
   text-shadow:
     0 0 3px rgba(217, 255, 245, 0.72),
@@ -58,7 +57,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 0.98;
-  font-size: clamp(52px, 6.8vw, 91px);
+  font-size: clamp(52px, 6.8vw, 78px);
   color: #dbf8f0;
   text-shadow:
     0 0 2px rgba(244, 255, 250, 0.9),
@@ -71,10 +70,11 @@
   justify-content: center;
   border: 1px solid rgba(207, 245, 238, 0.35);
   background: rgba(0, 0, 0, 0.28);
-  border-radius: 999px;
-  padding: 11px 28px;
+  border-radius: 96px;
+  padding: 25px;
   font-family: "Orbitron", sans-serif;
-  font-size: 34px;
+  font-size: 24px;
+  gap: 10px;
   line-height: 1;
   color: #ecf8f6;
   cursor: pointer;
@@ -90,29 +90,67 @@
 }
 
 .principles {
-  margin-top: 268px;
-  max-width: 1080px;
+  margin-top: 220px;
+  max-width: 100%;
 }
 
-.principles p {
-  margin: 0;
-  font-family: "Orbitron", sans-serif;
-  font-size: clamp(29px, 2.35vw, 37px);
-  line-height: 1.14;
+.principles-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 20px 14px 10px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   color: #e8f5f2;
-}
-
-.principles a {
-  color: inherit;
   text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
 }
 
-.principles a:hover {
-  color: #d8f7f1;
+.principle-row + .principle-row {
+  margin-top: 104px;
 }
 
-.principles p + p {
-  margin-top: 130px;
+.principle-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(26px, 1.95vw, 34px);
+  line-height: 1.16;
+}
+
+.principle-arrow {
+  font-size: clamp(36px, 2.6vw, 54px);
+  line-height: 1;
+  color: #d9f7f0;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    text-shadow 180ms ease;
+}
+
+.principle-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-top-color: rgba(204, 247, 238, 0.35);
+  border-bottom-color: rgba(204, 247, 238, 0.35);
+  color: #eefaf7;
+}
+
+.principle-row:hover .principle-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  text-shadow: 0 0 12px rgba(148, 251, 234, 0.45);
 }
 
 .footer {
@@ -430,8 +468,16 @@
     margin-top: 170px;
   }
 
-  .principles p + p {
-    margin-top: 84px;
+  .principle-row {
+    padding: 14px 10px;
+  }
+
+  .principle-row + .principle-row {
+    margin-top: 72px;
+  }
+
+  .principle-copy {
+    font-size: clamp(20px, 4.2vw, 26px);
   }
 
   .footer {

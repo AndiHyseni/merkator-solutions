@@ -389,7 +389,7 @@
 }
 
 .contact-info-card {
-  padding: 28px 96px;
+  padding: 28px 36px;
 }
 
 .contact-info-card p {
@@ -402,7 +402,7 @@
 
 .map-card {
   overflow: hidden;
-  min-height: 374px;
+  min-height: 472px;
 }
 
 .map-card iframe {

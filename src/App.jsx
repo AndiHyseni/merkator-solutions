@@ -299,10 +299,7 @@ function ContactPage() {
 
           <div className="contact-right">
             <div className="contact-info-card">
-              <p>0044 00 44 00 00</p>
-              <p>info@merkator-solutions.com</p>
-              <p>Gani Saramati 94,</p>
-              <p>Prizren, Kosovo</p>
+              <p>00 49 1777 368 369</p>
             </div>
             <div className="map-card" aria-label="Map preview">
               <iframe

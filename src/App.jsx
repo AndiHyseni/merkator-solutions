@@ -109,7 +109,11 @@ function HomePage() {
     <div className="page home-page">
       <div className="wave-layer" aria-hidden="true" />
 
-      <header className="brand">MERKATOR™</header>
+      <header className="brand">
+        <Link to="/" className="brand-link">
+          MERKATOR™
+        </Link>
+      </header>
 
       <main className="content">
         <section className="hero">
@@ -157,7 +161,9 @@ function DetailPage({ title, paragraphs, nextPath }) {
         <Link to="/" className="back-link" aria-label="Back to homepage">
           &lsaquo;
         </Link>
-        <span className="brand brand-left">MERKATOR™</span>
+        <Link to="/" className="brand brand-left brand-link">
+          MERKATOR™
+        </Link>
       </header>
 
       <main className="detail-content">
@@ -240,7 +246,11 @@ function ContactPage() {
     <div className="page contact-page">
       <div className="wave-layer contact-wave" aria-hidden="true" />
 
-      <header className="brand">MERKATOR™</header>
+      <header className="brand">
+        <Link to="/" className="brand-link">
+          MERKATOR™
+        </Link>
+      </header>
 
       <main className="contact-content">
         <h1 className="contact-title">Get in touch</h1>
@@ -319,7 +329,11 @@ function ErrorPage() {
     <div className="page error-page">
       <div className="wave-layer error-wave" aria-hidden="true" />
 
-      <header className="brand">MERKATOR™</header>
+      <header className="brand">
+        <Link to="/" className="brand-link">
+          MERKATOR™
+        </Link>
+      </header>
 
       <main className="error-content">
         <h1>ERROR 404</h1>

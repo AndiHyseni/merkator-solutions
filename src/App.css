@@ -37,6 +37,11 @@
   color: #f2f9f8;
 }
 
+.brand-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .content {
   /* width: min(1100px, calc(100% - 72px)); */
   margin: 138px 0 0;
@@ -45,7 +50,7 @@
 .hero-kicker {
   margin: 0;
   font-family: "Orbitron", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.2px;
   line-height: 1.04;
   font-size: 64px;
@@ -272,7 +277,7 @@
 .detail-footer p {
   margin: 0;
   font-family: "Orbitron", sans-serif;
-  font-size: clamp(20px, 1.3vw, 24px);
+  font-size: 20px;
   color: #f0f8f6;
 }
 
@@ -464,12 +469,20 @@
 }
 
 @media (max-width: 900px) {
-  .content,
+  /* .content,
   .footer,
   .detail-header,
   .detail-content,
   .detail-footer {
     width: calc(100% - 36px);
+  } */
+
+  .hero {
+    padding: 0 9px;
+  }
+
+  .hero-kicker {
+    font-size: 28px;
   }
 
   .content {
@@ -478,14 +491,20 @@
 
   .hero h1 {
     margin: 18px 0 24px;
+    font-size: 34px;
   }
 
   .principles {
-    margin-top: 170px;
+    margin-top: 120px;
+  }
+
+  .cta {
+    padding: 20px;
+    font-size: 18px;
   }
 
   .principle-row {
-    padding: 14px 10px;
+    padding: 36px 10px;
   }
 
   .principle-row + .principle-row {
@@ -493,15 +512,23 @@
   }
 
   .principle-copy {
-    font-size: clamp(20px, 4.2vw, 26px);
+    font-size: 18px;
   }
 
-  .footer {
-    margin-top: 120px;
+  .detail-header {
+    margin: 28px 10px 0;
   }
 
   .detail-content {
-    margin-top: 74px;
+    margin: 74px 10px 0;
+  }
+
+  .detail-title {
+    font-size: 28px;
+  }
+
+  .detail-copy p {
+    font-size: 16px;
   }
 
   .detail-copy {
@@ -510,6 +537,22 @@
 
   .detail-copy p + p {
     margin-top: 18px;
+  }
+
+  .detail-footer {
+    margin: 58px 10px 28px;
+  }
+
+  .detail-footer p {
+    font-size: 16px;
+  }
+
+  .footer {
+    margin: 120px 10px 44px;
+  }
+
+  .footer p {
+    font-size: 20px;
   }
 
   .detail-actions {
@@ -539,6 +582,36 @@
   }
 
   .wave-layer {
-    margin-top: 10%;
+    margin-top: 28%;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-form-card input,
+  .contact-form-card textarea {
+    font-size: 20px;
+    padding: 10px 10px;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px 36px;
+  }
+
+  .contact-info-card {
+    padding: 28px 44px;
+  }
+
+  .contact-info-card p {
+    font-size: 18px;
+  }
+
+  .error-content h1 {
+    font-size: 50px;
+  }
+
+  .error-back {
+    font-size: 28px;
   }
 }

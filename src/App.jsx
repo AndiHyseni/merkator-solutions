@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 
 const detailPages = [
@@ -332,26 +332,39 @@ function ErrorPage() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      {detailPages.map((detailPage) => (
-        <Route
-          key={detailPage.path}
-          path={detailPage.path}
-          element={
-            <DetailPage
-              title={detailPage.title}
-              paragraphs={detailPage.paragraphs}
-              nextPath={detailPage.nextPath}
-            />
-          }
-        />
-      ))}
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        {detailPages.map((detailPage) => (
+          <Route
+            key={detailPage.path}
+            path={detailPage.path}
+            element={
+              <DetailPage
+                title={detailPage.title}
+                paragraphs={detailPage.paragraphs}
+                nextPath={detailPage.nextPath}
+              />
+            }
+          />
+        ))}
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </>
   );
 }
 
